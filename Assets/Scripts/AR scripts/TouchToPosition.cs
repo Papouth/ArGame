@@ -67,4 +67,32 @@ public class TouchToPosition : MonoBehaviour
         float dotProd = Mathf.Abs(Vector3.Dot(Vector3.up, surfaceNormal));
         return dotProd < 0.15f;
     }
+
+    public void TranslateUIDisplay(bool value)
+    {
+        if (tuile != null)
+        {
+            if (!tuile.UION)
+            {
+                tuile.UION = true;
+                tuile.globalUI.SetActive(true);
+            }
+
+            tuile.translationUI.SetActive(!value);
+        }
+    }
+
+    public void RotateUIDisplay(bool value)
+    {
+        if (tuile != null)
+        {
+            if (!tuile.UION)
+            {
+                tuile.UION = true;
+                tuile.globalUI.SetActive(true);
+            }
+
+            tuile.rotationUI.SetActive(!value);
+        }
+    }
 }
