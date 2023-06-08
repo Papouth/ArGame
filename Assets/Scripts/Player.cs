@@ -21,12 +21,14 @@ public class Player : MonoBehaviour
 
     [Header("Player Components")]
     private Rigidbody rb;
+    private Animator anim;
     #endregion
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -36,26 +38,32 @@ public class Player : MonoBehaviour
 
     public void Avancer()
     {
+        anim.SetBool("Walking", true);
         transform.Translate(0f, 0f, 1f * playerSpeed * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(transform.forward);
+
+        StartCoroutine(StopAnim());
     }
 
     public void Reculer()
     {
-        transform.Translate(0f, 0f, -1f * playerSpeed * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(-transform.forward);
     }
 
     public void Gauche()
     {
-        transform.Translate(1f * playerSpeed * Time.deltaTime, 0f, 0f);
         transform.rotation = Quaternion.LookRotation(-transform.right);
     }
 
     public void Droit()
     {
-        transform.Translate(-1f * playerSpeed * Time.deltaTime, 0f, 0f);
         transform.rotation = Quaternion.LookRotation(transform.right);
+    }
+
+    private IEnumerator StopAnim()
+    {
+        yield return new WaitForSeconds(0.4f);
+        anim.SetBool("Walking", false);
     }
 
     private void Detection()
