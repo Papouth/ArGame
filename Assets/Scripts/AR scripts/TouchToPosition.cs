@@ -31,7 +31,7 @@ public class TouchToPosition : MonoBehaviour
         if (fingerTouch.index != 0) return;
 
         var ray = m_Camera.ScreenPointToRay(fingerTouch.currentTouch.screenPosition);
-        bool hasHit = Physics.Raycast(ray, out var hit, 30f);
+        bool hasHit = Physics.Raycast(ray, out var hit, 300f);
 
         if (hasHit && hit.collider.GetComponent<Tile>())
         {
@@ -53,11 +53,11 @@ public class TouchToPosition : MonoBehaviour
         }
 
         // Si on touche l'écran mais qu'il n'y a pas de tuile alors on retire l'UI s'il y en avait une
-        if (!hasHit && tuile != null)
-        {
-            tuile.globalUI.SetActive(false);
-            tuile.UION = false;
-        }
+        //if (!hasHit && tuile != null)
+        //{
+        //    tuile.globalUI.SetActive(false);
+        //    tuile.UION = false;
+        //}
     }
 
     private bool IsVertical(Vector3 surfaceNormal)
