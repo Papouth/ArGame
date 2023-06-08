@@ -344,8 +344,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2508843173489342253}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.000000002001444, y: -0.0105522275, z: -0.08542057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1c88499640a864dba4e3bc114578aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 0.1
+  playerSpeed: 5
   raycastLader: {fileID: 3528406873912370269}
   raycastVoid: {fileID: 4539083613327342378}
   raycastObstacle: {fileID: 6049499358953851855}
@@ -1096,7 +1096,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2.3
   m_Direction: 1
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!1 &6517420259393841185
 GameObject:
   m_ObjectHideFlags: 0

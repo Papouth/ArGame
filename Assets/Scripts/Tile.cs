@@ -18,6 +18,7 @@ public class Tile : MonoBehaviour
     [Header("Settings Snap")]
     private Vector3 truePos;
     [SerializeField] private float offsetSnap = 0.1f;
+    [SerializeField] private float offsetRot = 90f;
 
     #endregion
 
@@ -61,5 +62,17 @@ public class Tile : MonoBehaviour
 
         truePos.y = 0;
         transform.position = truePos;
+    }
+
+    public void RotateRight()
+    {
+        //transform.Rotate(0f, transform.rotation.y + offsetRot, 0f);
+        transform.eulerAngles = new Vector3(0f, transform.rotation.eulerAngles.y + offsetRot, 0f);
+    }
+
+    public void RotateLeft()
+    {
+        //transform.Rotate(0f, transform.rotation.y - offsetRot, 0f);
+        transform.eulerAngles = new Vector3(0f, transform.rotation.eulerAngles.y - offsetRot, 0f);
     }
 }
