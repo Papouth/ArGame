@@ -29,6 +29,8 @@ public class Tile : MonoBehaviour
 
     public void GoRight()
     {
+        Debug.Log("gzef");
+
         truePos.x = transform.position.x + offsetSnap;
         truePos.z = transform.position.z;
 
@@ -38,6 +40,7 @@ public class Tile : MonoBehaviour
 
     public void GoLeft()
     {
+        Debug.Log("jhytr");
         truePos.x = transform.position.x - offsetSnap;
         truePos.z = transform.position.z;
 
@@ -47,6 +50,7 @@ public class Tile : MonoBehaviour
 
     public void GoForward()
     {
+        Debug.Log("gzef");
         truePos.x = transform.position.x;
         truePos.z = transform.position.z + offsetSnap;
 
@@ -56,6 +60,8 @@ public class Tile : MonoBehaviour
 
     public void GoBackward()
     {
+        Debug.Log("gzef");
+
         truePos.x = transform.position.x;
         truePos.z = transform.position.z - offsetSnap;
 
