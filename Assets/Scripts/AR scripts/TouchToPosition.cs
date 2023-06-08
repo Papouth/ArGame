@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class TouchToPosition : MonoBehaviour
 {
-    [SerializeField] private GameObject ObjectPrefab;
-
     private Camera m_Camera;
     private Tile tuile;
 
@@ -68,7 +66,7 @@ public class TouchToPosition : MonoBehaviour
         return dotProd < 0.15f;
     }
 
-    public void TranslateUIDisplay(bool value)
+    public void TranslateUIDisplay()
     {
         if (tuile != null)
         {
@@ -78,11 +76,12 @@ public class TouchToPosition : MonoBehaviour
                 tuile.globalUI.SetActive(true);
             }
 
-            tuile.translationUI.SetActive(!value);
+            tuile.rotationUI.SetActive(false);
+            tuile.translationUI.SetActive(true);
         }
     }
 
-    public void RotateUIDisplay(bool value)
+    public void RotateUIDisplay()
     {
         if (tuile != null)
         {
@@ -92,7 +91,8 @@ public class TouchToPosition : MonoBehaviour
                 tuile.globalUI.SetActive(true);
             }
 
-            tuile.rotationUI.SetActive(!value);
+            tuile.translationUI.SetActive(false);
+            tuile.rotationUI.SetActive(true);
         }
     }
 }
