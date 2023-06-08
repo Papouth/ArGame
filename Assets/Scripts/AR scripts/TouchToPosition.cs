@@ -51,13 +51,6 @@ public class TouchToPosition : MonoBehaviour
             //Vector3 myForward = IsVertical(hit.normal) ? Vector3.up : Vector3.ProjectOnPlane(m_Camera.transform.position - hit.point, hit.normal);
             //ObjectPrefab.transform.SetPositionAndRotation(hit.point, Quaternion.LookRotation(myForward, Vector3.up));
         }
-
-        // Si on touche l'écran mais qu'il n'y a pas de tuile alors on retire l'UI s'il y en avait une
-        //if (!hasHit && tuile != null)
-        //{
-        //    tuile.globalUI.SetActive(false);
-        //    tuile.UION = false;
-        //}
     }
 
     private bool IsVertical(Vector3 surfaceNormal)
