@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class TouchToPosition : MonoBehaviour
 {
-    [SerializeField] private GameObject ObjectPrefab;
-
     private Camera m_Camera;
     private Tile tuile;
+
 
     private void Awake()
     {
@@ -32,28 +31,61 @@ public class TouchToPosition : MonoBehaviour
         if (fingerTouch.index != 0) return;
 
         var ray = m_Camera.ScreenPointToRay(fingerTouch.currentTouch.screenPosition);
-        bool hasHit = Physics.Raycast(ray, out var hit, 30f);
+        bool hasHit = Physics.Raycast(ray, out var hit, 300f);
+
         if (hasHit && hit.collider.GetComponent<Tile>())
         {
             // Si un UI de tuile est déjà affiché on le retire
-            if (tuile != null) tuile.GetComponentInChildren<Image>().enabled = false;
-
-            tuile = hit.collider.GetComponent<Tile>();
+            if (tuile != null)
+            {
+                tuile.globalUI.SetActive(false);
+                tuile.UION = false;
+            }
 
             // On viens afficher l'UI de la tuile
-            tuile.GetComponentInChildren<Image>().enabled = true;
+            tuile = hit.collider.GetComponent<Tile>();
+            tuile.globalUI.SetActive(true);
+            tuile.UION = true;
+
 
             //Vector3 myForward = IsVertical(hit.normal) ? Vector3.up : Vector3.ProjectOnPlane(m_Camera.transform.position - hit.point, hit.normal);
             //ObjectPrefab.transform.SetPositionAndRotation(hit.point, Quaternion.LookRotation(myForward, Vector3.up));
         }
-
-        // Si on touche l'écran mais qu'il n'y a pas de tuile alors on retire l'UI s'il y en avait une
-        if (tuile != null) tuile.GetComponentInChildren<Image>().enabled = false;
     }
 
     private bool IsVertical(Vector3 surfaceNormal)
     {
         float dotProd = Mathf.Abs(Vector3.Dot(Vector3.up, surfaceNormal));
         return dotProd < 0.15f;
+    }
+
+    public void TranslateUIDisplay()
+    {
+        if (tuile != null)
+        {
+            if (!tuile.UION)
+            {
+                tuile.UION = true;
+                tuile.globalUI.SetActive(true);
+            }
+
+            tuile.rotationUI.SetActive(false);
+            tuile.translationUI.SetActive(true);
+        }
+    }
+
+    public void RotateUIDisplay()
+    {
+        if (tuile != null)
+        {
+            if (!tuile.UION)
+            {
+                tuile.UION = true;
+                tuile.globalUI.SetActive(true);
+            }
+
+            tuile.translationUI.SetActive(false);
+            tuile.rotationUI.SetActive(true);
+        }
     }
 }
