@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: df84ef873eca83847bdfb2bff57cf0f7
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 5878686369825066462
+    second: moulin.001|Cube.001Action
+  - first:
+      74: -7619988645276850920
+    second: moulin.001|moulin.001Action
+  - first:
+      74: -3115516396292277679
+    second: moulin.001|pales.001Action
+  - first:
+      74: 490688183140563013
+    second: moulin.001|pales.001Action.001
+  - first:
+      74: 1243847283119462828
+    second: moulin.001|palesAction
+  - first:
+      74: 6995786631474809640
+    second: moulin.001|palesAction.001
+  - first:
+      74: 8662127707578997147
+    second: moulin.001|Plateforme1|Take 001|BaseLayer
+  - first:
+      74: -1747580694684472654
+    second: moulin.001|Plateforme2|Take 001|BaseLayer
+  - first:
+      74: -6204591121869678666
+    second: moulin.001|Plateforme3|Take 001|BaseLayer
+  - first:
+      74: -6208643619123539854
+    second: pales.001|Cube.001Action
+  - first:
+      74: 7979948364923438278
+    second: pales.001|moulin.001Action
+  - first:
+      74: 4835805205021859056
+    second: pales.001|pales.001Action
+  - first:
+      74: 1031803863093097118
+    second: pales.001|pales.001Action.001
+  - first:
+      74: 822062503260692712
+    second: pales.001|palesAction
+  - first:
+      74: -485904776878202643
+    second: pales.001|palesAction.001
+  - first:
+      74: 423586681582084094
+    second: pales.001|Plateforme1|Take 001|BaseLayer
+  - first:
+      74: -4321147313890811939
+    second: pales.001|Plateforme2|Take 001|BaseLayer
+  - first:
+      74: -1533145206232113897
+    second: pales.001|Plateforme3|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: pales.001|pales.001Action.001
+      takeName: pales.001|pales.001Action.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
