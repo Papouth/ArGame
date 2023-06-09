@@ -796,7 +796,6 @@ GameObject:
   - component: {fileID: 5698113157896255451}
   - component: {fileID: 492581939567958011}
   - component: {fileID: 5425924724301213822}
-  - component: {fileID: 9048875993694778749}
   m_Layer: 3
   m_Name: echelle_02_part01
   m_TagString: Untagged
@@ -880,21 +879,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2666707, y: 4.007071, z: 0.11719}
-  m_Center: {x: 0.51408076, y: 1.9964645, z: 0.058595024}
---- !u!65 &9048875993694778749
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4082728656298264766}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2666707, y: 4.007071, z: 0.11719}
-  m_Center: {x: -0.5140808, y: 1.9964645, z: 0.058595024}
+  m_Size: {x: 1.3120966, y: 4.007071, z: 0.11719}
+  m_Center: {x: -0.008632153, y: 1.9964645, z: 0.058595024}
 --- !u!1 &5477294798669990494
 GameObject:
   m_ObjectHideFlags: 0
