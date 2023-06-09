@@ -19,7 +19,6 @@ public class Tile : MonoBehaviour
     private Vector3 truePos;
     [SerializeField] private float offsetSnap = 0.1f;
     [SerializeField] private float offsetRot = 90f;
-
     #endregion
 
 
