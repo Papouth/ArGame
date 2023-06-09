@@ -26,6 +26,7 @@ public class Tile : MonoBehaviour
     private void Start()
     {
         globalUI.SetActive(false);
+        rotationUI.SetActive(false);
     }
 
     public void GoRight()
@@ -66,13 +67,11 @@ public class Tile : MonoBehaviour
 
     public void RotateRight()
     {
-        //transform.Rotate(0f, transform.rotation.y + offsetRot, 0f);
         transform.eulerAngles = new Vector3(0f, transform.rotation.eulerAngles.y + offsetRot, 0f);
     }
 
     public void RotateLeft()
     {
-        //transform.Rotate(0f, transform.rotation.y - offsetRot, 0f);
         transform.eulerAngles = new Vector3(0f, transform.rotation.eulerAngles.y - offsetRot, 0f);
     }
 }
