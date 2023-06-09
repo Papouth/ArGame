@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7596847940134928536}
   - component: {fileID: 2661115186017129769}
   - component: {fileID: 800863891844819631}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2051492640969438774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_1bloc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7736254895428289080}
   - component: {fileID: 6919708528576662428}
   - component: {fileID: 1843965995429171326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 2661789289389042993}
   - component: {fileID: 7436972440386227970}
   - component: {fileID: 1879203155346213167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 2093174982748796932}
   - component: {fileID: 2641168480831909476}
   - component: {fileID: 5459673110548593058}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 4408586982965582430}
   - component: {fileID: 4730192720553225082}
   - component: {fileID: 2152758752341801673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 689852608029244974}
   - component: {fileID: 5484203122202406909}
   - component: {fileID: 6458217434474405173}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: echelle_01_part06
   m_TagString: Untagged
   m_Icon: {fileID: 0}

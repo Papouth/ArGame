@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     #region Variables
     [Header("Player Movement")]
     [SerializeField] private float playerSpeed = 1f;
+    private bool isClimbing;
 
     [Header("Raycasts Detection")]
     [SerializeField] private Transform raycastLader;
     [SerializeField] private Transform raycastVoid;
     [SerializeField] private Transform raycastObstacle;
+    [SerializeField] private LayerMask laderMask;
     private bool haveLader;
     private bool haveVoid;
     private bool haveObstacle;
@@ -34,15 +36,35 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Detection();
+
+        if (!haveLader)
+        {
+            anim.SetBool("Climbing", false);
+            isClimbing = false;
+        }
+
+        if (haveLader && isClimbing)
+        {
+            transform.Translate(0f, 1f * playerSpeed * Time.deltaTime, 0f);
+        }
     }
 
+    #region Déplacements
     public void Avancer()
     {
-        anim.SetBool("Walking", true);
-        transform.Translate(0f, 0f, 1f * playerSpeed * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(transform.forward);
+        if (!haveLader && !haveVoid && !haveObstacle)
+        {
+            anim.SetBool("Walking", true);
+            transform.Translate(0f, 0f, 1f * playerSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.LookRotation(transform.forward);
 
-        StartCoroutine(StopAnim());
+            StartCoroutine(StopAnim());
+        }
+        else if (haveLader)
+        {
+            anim.SetBool("Climbing", true);
+            isClimbing = true;
+        }
     }
 
     public void Reculer()
@@ -65,11 +87,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         anim.SetBool("Walking", false);
     }
+    #endregion
 
     private void Detection()
     {
         // Raycast qui Detecte s'il y a une échelle devant nous
-        if (Physics.Raycast(raycastLader.position, transform.forward, distanceLader))
+        if (Physics.Raycast(raycastLader.position, transform.forward, distanceLader, laderMask))
         {
             haveLader = true;
         }
@@ -81,11 +104,11 @@ public class Player : MonoBehaviour
         // Raycast qui Detecte s'il y a du vide devant nous
         if (Physics.Raycast(raycastVoid.position, -transform.up, distanceVoid))
         {
-            haveVoid = true;
+            haveVoid = false;
         }
         else
         {
-            haveVoid = false;
+            haveVoid = true;
         }
 
         // Raycast qui Detecte s'il y a un obstacle devant nous
@@ -98,7 +121,6 @@ public class Player : MonoBehaviour
             haveObstacle = false;
         }
     }
-
 
     private void OnDrawGizmos()
     {
