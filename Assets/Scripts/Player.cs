@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
             anim.SetBool("Climbing", false);
             transform.Translate(0f, 0f, 1f * playerSpeed * Time.deltaTime);
             isClimbing = false;
+            StartCoroutine(WalkLaderEnd());
             return;
         }
 
@@ -127,6 +128,14 @@ public class Player : MonoBehaviour
         {
             haveObstacle = false;
         }
+    }
+
+    private IEnumerator WalkLaderEnd()
+    {
+        yield return new WaitForSeconds(0.2f);
+        transform.Translate(0f, 1f * playerSpeed * Time.deltaTime, 0f);
+        yield return new WaitForSeconds(0.1f);
+        transform.Translate(0f, 0f, 1.5f * playerSpeed * Time.deltaTime);
     }
 
     public void VictoryUI()

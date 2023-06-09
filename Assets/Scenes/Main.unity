@@ -2967,19 +2967,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7220246082967961760, guid: 1aef21d6ff52bd341b02dd9a83bc48ac,
         type: 3}
-      propertyPath: playerSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7220246082967961760, guid: 1aef21d6ff52bd341b02dd9a83bc48ac,
-        type: 3}
       propertyPath: victoryText
       value: 
       objectReference: {fileID: 1561975491}
-    - target: {fileID: 7220246082967961760, guid: 1aef21d6ff52bd341b02dd9a83bc48ac,
-        type: 3}
-      propertyPath: layerVictoire.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1aef21d6ff52bd341b02dd9a83bc48ac, type: 3}
 --- !u!1001 &5949660581189079786

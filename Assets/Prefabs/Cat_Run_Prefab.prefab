@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1c88499640a864dba4e3bc114578aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 5
+  playerSpeed: 2
   raycastLader: {fileID: 3528406873912370269}
   raycastVoid: {fileID: 4539083613327342378}
   raycastObstacle: {fileID: 6049499358953851855}
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   victoryText: {fileID: 0}
   layerVictoire:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!136 &6813315087382089335
 CapsuleCollider:
   m_ObjectHideFlags: 0
