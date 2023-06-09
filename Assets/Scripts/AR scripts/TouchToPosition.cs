@@ -33,7 +33,7 @@ public class TouchToPosition : MonoBehaviour
         var ray = m_Camera.ScreenPointToRay(fingerTouch.currentTouch.screenPosition);
         bool hasHit = Physics.Raycast(ray, out var hit, 300f);
 
-        if (hasHit && hit.collider.GetComponent<Tile>())
+        if (hasHit && hit.collider.GetComponentInParent<Tile>())
         {
             // Si un UI de tuile est déjà affiché on le retire
             if (tuile != null)
@@ -43,7 +43,7 @@ public class TouchToPosition : MonoBehaviour
             }
 
             // On viens afficher l'UI de la tuile
-            tuile = hit.collider.GetComponent<Tile>();
+            tuile = hit.collider.GetComponentInParent<Tile>();
             tuile.globalUI.SetActive(true);
             tuile.UION = true;
 
