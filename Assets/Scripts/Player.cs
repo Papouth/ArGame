@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -21,26 +22,32 @@ public class Player : MonoBehaviour
     [SerializeField] private float distanceVoid = 0.1f;
     [SerializeField] private float distanceObstacle = 0.1f;
 
+    [Header("UI Victoire")]
+    [SerializeField] private TextMeshProUGUI victoryText;
+    [SerializeField] private LayerMask layerVictoire;
+
     [Header("Player Components")]
-    private Rigidbody rb;
     private Animator anim;
     #endregion
 
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Time.timeScale = 1;
         anim = GetComponent<Animator>();
+        victoryText.enabled = false;
     }
 
     private void Update()
     {
         Detection();
 
-        if (!haveLader)
+        if (!haveLader && isClimbing)
         {
             anim.SetBool("Climbing", false);
+            transform.Translate(0f, 0f, 1f * playerSpeed * Time.deltaTime);
             isClimbing = false;
+            return;
         }
 
         if (haveLader && isClimbing)
@@ -119,6 +126,16 @@ public class Player : MonoBehaviour
         else
         {
             haveObstacle = false;
+        }
+    }
+
+    public void VictoryUI()
+    {
+        if (Physics.Raycast(raycastObstacle.position, transform.forward, distanceObstacle, layerVictoire))
+        {
+            // Affichage de la victoire et arrêt du jeu
+            victoryText.enabled = true;
+            Time.timeScale = 0;
         }
     }
 

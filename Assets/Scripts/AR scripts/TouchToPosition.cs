@@ -46,17 +46,7 @@ public class TouchToPosition : MonoBehaviour
             tuile = hit.collider.GetComponentInParent<Tile>();
             tuile.globalUI.SetActive(true);
             tuile.UION = true;
-
-
-            //Vector3 myForward = IsVertical(hit.normal) ? Vector3.up : Vector3.ProjectOnPlane(m_Camera.transform.position - hit.point, hit.normal);
-            //ObjectPrefab.transform.SetPositionAndRotation(hit.point, Quaternion.LookRotation(myForward, Vector3.up));
         }
-    }
-
-    private bool IsVertical(Vector3 surfaceNormal)
-    {
-        float dotProd = Mathf.Abs(Vector3.Dot(Vector3.up, surfaceNormal));
-        return dotProd < 0.15f;
     }
 
     public void TranslateUIDisplay()
@@ -86,6 +76,18 @@ public class TouchToPosition : MonoBehaviour
 
             tuile.translationUI.SetActive(false);
             tuile.rotationUI.SetActive(true);
+        }
+    }
+
+    public void DisableUI()
+    {
+        if (tuile != null)
+        {
+            if (tuile.UION)
+            {
+                tuile.UION = false;
+                tuile.globalUI.SetActive(false);
+            }
         }
     }
 }
